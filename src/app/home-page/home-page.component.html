@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2">
+    @for (val of destinations; track val){
+    <div class="d-flex justify-content-center mt-5">
+      <div class="card" style="width: 22rem">
+        <div class="imgBox mb-3 mt-3">
+          <div>
+            <h5 class="imgTxt">
+              <strong>{{ val.name }}</strong> - {{ val.country }}
+            </h5>
+            <img
+              class="imgCar card-img-top"
+              src="{{ val.imgURL }}"
+              alt="not submitted"
+            />
+            <div class="priceBanner">€{{ val.price }},-</div>
+          </div>
+          <p class="desc-txt p-3">{{ val.desc }}</p>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+</div>

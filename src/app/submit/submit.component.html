@@ -1,0 +1,63 @@
+<div class="container">
+  <h1 class="mt-5">Submit new Travel Destination</h1>
+
+  <div class="formContainer">
+    <form [formGroup]="newDestination" (ngSubmit)="printInput()">
+      <label for="name" class="form-label">Destination Name:</label>
+      <input
+        id="name"
+        class="formSytle form-control"
+        type="text"
+        placeholder="Name"
+        formControlName="n_name"
+      />
+      <label for="country" class="form-label">Country:</label>
+      <input
+        id="country"
+        class="formSytle form-control"
+        type="text"
+        placeholder="Country"
+        formControlName="n_country"
+      />
+      <label for="price" class="form-label">Price:</label>
+      <input
+        id="price"
+        class="formSytle form-control"
+        type="number"
+        placeholder="Price"
+        formControlName="n_price"
+      />
+      <label for="desc" class="form-label">Description:</label>
+      <input
+        id="desc"
+        class="formSytle form-control"
+        type="text"
+        placeholder="Description"
+        formControlName="n_desc"
+      />
+      <label for="duration" class="form-label">Duration of Stay:</label>
+      <input
+        id="duration"
+        class="formSytle form-control"
+        type="number"
+        placeholder="Duration of Stay"
+        formControlName="n_duration"
+      />
+      <label for="img" class="form-label">Image:</label>
+      <input
+        id="img"
+        class="formSytle form-control"
+        type="url"
+        placeholder="Image URL"
+        formControlName="n_imgURL"
+      />
+      <input type="submit" value="Submit" class="btn btn-info me-3" />
+      <input
+        type="button"
+        class="btn btn-info"
+        (click)="resetForm()"
+        value="Clear"
+      />
+    </form>
+  </div>
+</div>

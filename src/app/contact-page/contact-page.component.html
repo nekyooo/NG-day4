@@ -1,0 +1,42 @@
+<div class="container">
+  <h1 class="mt-5">Contact Us</h1>
+
+  <div class="formContainer">
+    <form [formGroup]="userInfo" (ngSubmit)="printInput()">
+      <label for="name" class="form-label">Your Name:</label>
+      <input
+        id="name"
+        class="formSytle form-control"
+        type="text"
+        placeholder="Name"
+        formControlName="userName"
+      />
+      <label for="email" class="form-label">Your E-mail:</label>
+      <input
+        id="email"
+        class="formSytle form-control"
+        type="email"
+        placeholder="something@something.com"
+        formControlName="userMail"
+      />
+      <label for="msg" class="form-label">Your Message:</label>
+      <textarea
+        id="msg"
+        class="formSytle form-control"
+        type=""
+        placeholder="your Message here"
+        formControlName="userMsg"
+        rows="4"
+        cols="50"
+      >
+      </textarea>
+      <input type="submit" value="Submit" class="btn btn-info me-3" />
+      <input
+        type="button"
+        class="btn btn-info"
+        (click)="resetForm()"
+        value="Clear"
+      />
+    </form>
+  </div>
+</div>
